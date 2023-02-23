@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
-import { PollingUnits } from "../Data/PollingUnits.js";
+import { Data } from "../Data/Data";
+
 
 const State = () => {
 	return (
@@ -14,20 +15,28 @@ const State = () => {
 			</div>
 			<div className="stateForm infoForm ">
 				<h3>DELTA STATE</h3>
-                <button className="button infoButton">WARD 2</button>
-				
-					{PollingUnits.map((PollingUnit) => {
+				{/* <h3>Ugheli LGA</h3> */}
+                
+				<div>
+					<select name="" id="" placeholder="Choose LGA">
+					{Data.map((data)=>{
 						return (
-							<div>
-								<button
-									className="button infoButton"
-									type="submit"
-								>
-									{PollingUnit}
-								</button>
-							</div>
-						);
+							
+							<option value="">{data.lga}</option>
+							
+							
+							
+						)
 					})}
+					<span>{Data.pollingUnit}</span>
+					</select>
+					
+					
+				</div>
+				<button className="button infoButton">WARD</button>
+				
+				
+					
 				
 			</div>
 		</div>

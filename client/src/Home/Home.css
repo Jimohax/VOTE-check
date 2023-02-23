@@ -46,6 +46,7 @@
     justify-content: center;
     gap: 2rem;
     height: 25rem;
+    width: 15rem;
     overflow: auto;
 }
 
